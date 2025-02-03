@@ -71,7 +71,7 @@ async def submit_feedback(feedback: FeedbackModel):
     feedback_collection.insert_one(feedback_data)
     return {"message": "Feedback submitted successfully!"}
 
-@app.get("/", response_class=HTMLResponse)
+@app.head("/", response_class=HTMLResponse)
 def home_page():
     return """
    <!DOCTYPE html>
