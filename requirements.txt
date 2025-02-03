@@ -2,6 +2,4 @@ fastapi
 uvicorn
 pydantic
 pymongo
-
-python-dotenv  # Optional, for loading environment variables securely
-
+python-multipart
