@@ -9,14 +9,14 @@ from pymongo import MongoClient
 
 app = FastAPI()
 
-# Directory to store uploaded files
+# Directory to store uploaded files.
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# Serve uploaded files as static files
+# Serve uploaded files as static files.
 app.mount("/static", StaticFiles(directory=UPLOAD_DIR), name="static")
 
-# Store uploaded media files
+# Store uploaded media files.
 uploaded_media = {}
 
 def parse_whatsapp_txt(file_content: str) -> Dict[str, List]:
